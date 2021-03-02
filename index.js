@@ -34,7 +34,9 @@ DB
  app.use(bodyParser.json());
  app.use(routes);
 
-
+app.get('/',(req, res)=>{
+    return res.json({message: 'Sistema online'})
+})
 /* configurações de adm do sitema e autenticação */
 
 const JWTSecret = process.env.JWT_SECRET_KEY;
