@@ -2,53 +2,10 @@ const User = require("../model/User");
 
 module.exports = {
   async index(req, res) {
-
-     /* const { name } = req.query;
-    
-
-    if(name === null){
-      const users = await User.findAll({
-        order: [["name"]],
-      });
-      return res.status(200).json(users);
-    }else{
-      const user = await User.findOne({
-        where: {
-          name: name
-        }
-      })
-      return res.status(200).json(user)
-    } */
- 
-     /*  const { id, name, phone, payday } = req.query;
-      const where = {
-
-      },
-
-      if(id) where.id = id
-      if(name) where.name = name
-      if(phone) where.phone = phone
-      if(payday) where.payday = payday
-      
-      
-
-      const data = await User.findAll({
-        where,
-      });
-
-      console.log(data)
-      return res.status(200).json(data); */
-     
-       
      const users = await User.findAll({
          order: [["name"]],
        });
        return res.status(200).json(users);  
-   
-
-     
-   
-    
   },
 
   async store(req, res) {
